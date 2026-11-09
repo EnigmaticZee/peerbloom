@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peerbloom: the private torrent client for Mac</title>
+<meta name="description" content="Peerbloom is a free, open source BitTorrent client for macOS. No ads, no accounts, no tracking. VPN binding, Privacy mode, malware warnings and themes.">
+<meta name="theme-color" content="#05080f">
+<meta property="og:title" content="Peerbloom: the private torrent client for Mac">
+<meta property="og:description" content="Free and open source. No ads, no accounts, no tracking. Built for the Mac.">
+<meta property="og:image" content="https://enigmaticzee.github.io/peerbloom/assets/og.png">
+<meta property="og:url" content="https://enigmaticzee.github.io/peerbloom/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Peerbloom home">
+    <img src="assets/icon.png" alt="" width="32" height="32">
+    <span>Peerbloom</span>
+  </a>
+  <nav aria-label="Sections">
+    <a href="#features">Features</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#themes">Themes</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a class="btn btn-ghost btn-sm" href="https://github.com/EnigmaticZee/peerbloom">
+    <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.22 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.83-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>
+    GitHub
+  </a>
+</header>
+
+<main id="main">
+
+<!-- Hero -->
+<section class="hero" id="top">
+  <canvas class="swarm" id="swarm" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <div class="hero-icon reveal">
+      <img src="assets/icon.png" alt="Peerbloom app icon" width="200" height="200">
+    </div>
+    <p class="eyebrow reveal">Free · Open source · Made for the Mac</p>
+    <h1 class="reveal">Torrents, without<br><span class="grad">the creepy parts.</span></h1>
+    <p class="lede reveal">Peerbloom is a fast, beautiful BitTorrent client for macOS. No ads, no accounts, no tracking. Ever. It locks to your VPN, warns you about malware, and stays out of your way.</p>
+    <div class="cta reveal">
+      <a class="btn btn-primary" href="https://github.com/EnigmaticZee/peerbloom/releases/latest/download/Peerbloom.dmg">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        Download for Mac
+      </a>
+      <a class="btn btn-ghost" href="https://github.com/EnigmaticZee/peerbloom">View the code</a>
+    </div>
+    <p class="fine reveal">macOS 14 or later · Apple silicon · 9 MB · <a href="#faq-gatekeeper">First launch help</a></p>
+  </div>
+</section>
+
+<!-- Live app demo -->
+<section class="showcase" aria-label="Peerbloom app preview">
+  <div class="stage reveal">
+    <div class="window" id="app" data-theme="peerbloom" role="img" aria-label="The Peerbloom window, with transfers downloading and seeding">
+      <div class="titlebar">
+        <div class="lights" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="title">
+          <strong>All Transfers</strong>
+          <span class="rates"><b class="dl">↓ <span data-total="down">28.1 MB/s</span></b> <b class="ul">↑ <span data-total="up">5.5 MB/s</span></b></span>
+        </div>
+        <div class="tools" aria-hidden="true">
+          <span class="tool">＋</span><span class="tool">❚❚</span><span class="tool">▶</span>
+          <span class="search">Search transfers</span>
+        </div>
+      </div>
+      <div class="body">
+        <aside class="side">
+          <p class="side-h">Transfers</p>
+          <p class="side-i on"><span>All</span><em>6</em></p>
+          <p class="side-i"><i class="dot dl"></i><span>Downloading</span><em>3</em></p>
+          <p class="side-i"><i class="dot ul"></i><span>Seeding</span><em>2</em></p>
+          <p class="side-i"><i class="dot mute"></i><span>Paused</span><em>1</em></p>
+          <p class="side-h">Tags</p>
+          <p class="side-i"><i class="dot ul"></i><span>Open Movies</span></p>
+          <p class="side-i"><i class="dot dl"></i><span>Linux ISOs</span></p>
+          <div class="vpn" data-vpn>
+            <p class="vpn-t"><span class="shield">✓</span> <span data-vpn-title>Protected</span></p>
+            <p class="vpn-s" data-vpn-sub>Traffic only goes through <b>utun4</b>.</p>
+          </div>
+        </aside>
+        <div class="list">
+          <div class="row head"><span>Name</span><span>Progress</span><span>Down</span><span>Up</span></div>
+          <div data-rows></div>
+        </div>
+        <aside class="inspector">
+          <p class="insp-name" data-insp-name>ubuntu-26.04-desktop-amd64.iso</p>
+          <p class="insp-sub" data-insp-sub>142 peers · 3.78 of 6.10 GB</p>
+          <p class="insp-h">Pieces</p>
+          <div class="pieces" data-pieces></div>
+          <p class="insp-h">Speed · last minute</p>
+          <svg class="chart" viewBox="0 0 240 70" preserveAspectRatio="none" aria-hidden="true">
+            <path class="chart-dl" data-chart="dl" d=""/>
+            <path class="chart-ul" data-chart="ul" d=""/>
+          </svg>
+          <div class="insp-stats">
+            <p><span>Ratio</span><b>0.31</b></p>
+            <p><span>Time left</span><b data-eta>2m 14s</b></p>
+            <p><span>Encryption</span><b>Required</b></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <p class="caption">This is a live demo running in your browser, moving the way the real app does.</p>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section" id="features">
+  <div class="section-head reveal">
+    <p class="eyebrow">Everything you need</p>
+    <h2>Simple on the surface.<br>Serious underneath.</h2>
+    <p class="sub">Built on libtorrent, the same battle-tested engine behind qBittorrent and Deluge, with a native Mac app on top.</p>
+  </div>
+  <div class="grid">
+    <article class="card reveal">
+      <div class="card-icon i-blue"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h3>Locks to your VPN</h3>
+      <p>Bind Peerbloom to any active VPN. It follows the tunnel through reconnects, and nothing ever slips out over your normal connection.</p>
+    </article>
+    <article class="card reveal">
+      <div class="card-icon i-aqua"><svg viewBox="0 0 24 24"><path d="M3 12s3.5-7 9-7 9 7 9 7-3.5 7-9 7-9-7-9-7z"/><path d="M4 4l16 16"/></svg></div>
+      <h3>Privacy mode</h3>
+      <p>One switch: VPN or SOCKS5 proxy only, encryption required, anonymous mode on, and no local broadcasts.</p>
+    </article>
+    <article class="card reveal">
+      <div class="card-icon i-amber"><svg viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4m0 3h.01"/></svg></div>
+      <h3>Malware warnings</h3>
+      <p>Spots apps, installers, scripts and fakes like <code>movie.mp4.exe</code> before you download, and quarantines everything it saves.</p>
+    </article>
+    <article class="card reveal">
+      <div class="card-icon i-blue"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M10 9l5 3-5 3V9z"/></svg></div>
+      <h3>Watch while it downloads</h3>
+      <p>Stream mode fetches pieces in order, so open videos start playing right away.</p>
+    </article>
+    <article class="card reveal">
+      <div class="card-icon i-aqua"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/><circle cx="18" cy="16" r="3"/></svg></div>
+      <h3>Feels like a Mac app</h3>
+      <p>Menu bar speeds, notifications, colour tags, a slow-mode schedule, and it pauses before your disk fills up.</p>
+    </article>
+    <article class="card reveal">
+      <div class="card-icon i-amber"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="8.5" cy="10" r="1.3"/><circle cx="12" cy="7.5" r="1.3"/><circle cx="15.5" cy="10" r="1.3"/><path d="M12 21a3 3 0 0 1 0-6h2"/></svg></div>
+      <h3>Make it yours</h3>
+      <p>Six built-in themes, and a Theme Maker that designs a new one from a few questions.</p>
+    </article>
+  </div>
+</section>
+
+<!-- Privacy -->
+<section class="section split" id="privacy">
+  <div class="split-text reveal">
+    <p class="eyebrow">Privacy, honestly</p>
+    <h2>If the VPN drops,<br>nothing leaks.</h2>
+    <p class="sub">BitTorrent is public by design: peers can see the address you connect from. Peerbloom makes your own VPN watertight. Bind it once, and when the tunnel goes down, traffic stops instead of falling back to your home connection.</p>
+    <ul class="checks">
+      <li>No ads, no accounts, no analytics. Not now, not later.</li>
+      <li>Shows the address peers see, so you know your VPN works.</li>
+      <li>Detects your VPN app and opens it in one click.</li>
+      <li>SOCKS5 and HTTP proxies, with the password kept in your Keychain.</li>
+    </ul>
+    <button class="btn btn-ghost" id="vpn-toggle" type="button" aria-pressed="false">Simulate a VPN drop</button>
+  </div>
+  <div class="tunnel reveal" data-tunnel aria-live="polite">
+    <svg viewBox="0 0 420 260" role="img" aria-label="Your Mac connects to the swarm only through the VPN tunnel">
+      <defs>
+        <linearGradient id="tunnel-g" x1="0" x2="1"><stop offset="0" stop-color="#3C6BFF"/><stop offset="1" stop-color="#2DE1C2"/></linearGradient>
+      </defs>
+      <rect class="mac" x="18" y="92" width="96" height="70" rx="12"/>
+      <rect class="mac-screen" x="28" y="102" width="76" height="44" rx="5"/>
+      <text class="mac-t" x="66" y="182" text-anchor="middle">Your Mac</text>
+      <path class="pipe" d="M114 127 C 180 127, 220 127, 290 127"/>
+      <path class="flow" d="M114 127 C 180 127, 220 127, 290 127"/>
+      <text class="pipe-t" x="202" y="108" text-anchor="middle" data-pipe-label>VPN tunnel</text>
+      <g class="peers">
+        <circle cx="330" cy="70" r="9"/><circle cx="372" cy="104" r="7"/><circle cx="352" cy="150" r="10"/>
+        <circle cx="392" cy="176" r="6"/><circle cx="318" cy="196" r="8"/><circle cx="398" cy="58" r="5"/>
+      </g>
+      <text class="mac-t" x="356" y="236" text-anchor="middle">The swarm</text>
+    </svg>
+    <p class="tunnel-status" data-tunnel-status><span class="pill ok">Protected</span> Traffic only goes through your VPN.</p>
+  </div>
+</section>
+
+<!-- Safety -->
+<section class="section split reverse" id="safety">
+  <div class="split-text reveal">
+    <p class="eyebrow">Safety, built in</p>
+    <h2>Movies don't need<br>to be programs.</h2>
+    <p class="sub">The biggest danger in torrents isn't the protocol. It's malware dressed up as something harmless. Peerbloom checks every file list and flags apps, installers, scripts and disguised files, with one click to skip them. Everything it saves gets the same quarantine mark as a Safari download, so macOS checks it before it can run.</p>
+  </div>
+  <div class="sheet reveal" data-scan>
+    <p class="sheet-h">Sintel (2010) 4K · 3 files</p>
+    <div class="banner" data-banner>
+      <b>This torrent contains programs</b>
+      <span>One file pretends to be something harmless but is actually a program.</span>
+      <button type="button" data-skip>Skip These Files</button>
+    </div>
+    <ul class="files">
+      <li><span class="ok-mark">✓</span> Sintel.2010.4K.mkv <em>4.2 GB</em></li>
+      <li><span class="ok-mark">✓</span> Subtitles/English.srt <em>18 KB</em></li>
+      <li class="bad" data-bad><span class="warn-mark">!</span> Sintel.2010.4K.mp4.exe <em>2.1 MB</em></li>
+    </ul>
+    <div class="scanline" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- Themes -->
+<section class="section" id="themes">
+  <div class="section-head reveal">
+    <p class="eyebrow">Themes</p>
+    <h2>Your colours. Your rules.</h2>
+    <p class="sub">Pick a theme to restyle the demo window above, and this mini one. Or paste the Theme Maker into any AI assistant: it asks what you like and writes a theme file you double-click to install. Themes are data only, so they can't run code.</p>
+  </div>
+  <div class="chips reveal" role="radiogroup" aria-label="Theme" data-chips>
+    <button type="button" role="radio" aria-checked="true" data-theme-pick="peerbloom"><i style="--a:#4C9EFF;--b:#F5A04A"></i>Peerbloom</button>
+    <button type="button" role="radio" aria-checked="false" data-theme-pick="ocean"><i style="--a:#4FA3FF;--b:#2DE1C2"></i>Ocean</button>
+    <button type="button" role="radio" aria-checked="false" data-theme-pick="forest"><i style="--a:#6FD39A;--b:#E8C468"></i>Forest</button>
+    <button type="button" role="radio" aria-checked="false" data-theme-pick="paper"><i style="--a:#2B59C3;--b:#B4532A"></i>Paper</button>
+    <button type="button" role="radio" aria-checked="false" data-theme-pick="terminal"><i style="--a:#33FF66;--b:#FFB000"></i>Terminal</button>
+    <button type="button" role="radio" aria-checked="false" data-theme-pick="contrast"><i style="--a:#6FB6FF;--b:#FFB547"></i>High Contrast</button>
+  </div>
+  <div class="mini-wrap reveal">
+    <div class="window mini" id="mini" data-theme="peerbloom" aria-hidden="true">
+      <div class="titlebar"><div class="lights"><i></i><i></i><i></i></div><div class="title"><strong>Downloading</strong></div></div>
+      <div class="body"><div class="list"><div data-rows-mini></div></div></div>
+    </div>
+    <pre class="code" aria-label="Example theme file"><code>{
+  <span class="k">"name"</span>: <span class="s">"Night Swim"</span>,
+  <span class="k">"appearance"</span>: <span class="s">"dark"</span>,
+  <span class="k">"font"</span>: <span class="s">"rounded"</span>,
+  <span class="k">"colors"</span>: {
+    <span class="k">"download"</span>: <span class="s">"#4FA3FF"</span>,
+    <span class="k">"seeding"</span>:  <span class="s">"#2DE1C2"</span>,
+    <span class="k">"background"</span>: <span class="s">"#0B1A2E"</span>
+  }
+}</code></pre>
+  </div>
+</section>
+
+<!-- Numbers -->
+<section class="section numbers">
+  <div class="stats">
+    <div class="stat reveal"><b data-count="0">0</b><span>ads, trackers or analytics</span></div>
+    <div class="stat reveal"><b><span data-count="23">23</span> MB</b><span>the whole app</span></div>
+    <div class="stat reveal"><b>~<span data-count="90">90</span> MB</b><span>memory, measured while running</span></div>
+    <div class="stat reveal"><b>GPL-3.0</b><span>open source, forever</span></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="section-head reveal">
+    <p class="eyebrow">Questions</p>
+    <h2>Good to know</h2>
+  </div>
+  <div class="faq-list">
+    <details class="reveal">
+      <summary>Is Peerbloom really free?</summary>
+      <p>Yes. It's open source under the GNU GPL v3, with no ads, no paid tier and no accounts. Anyone can read the code, and changed versions must stay open too, so it can't be turned into a closed app with ads later.</p>
+    </details>
+    <details class="reveal" id="faq-gatekeeper">
+      <summary>Why does macOS say it can't verify Peerbloom?</summary>
+      <p>Peerbloom isn't signed with a paid Apple Developer ID. To open it the first time: open Peerbloom once and close the warning, then go to System Settings › Privacy &amp; Security, scroll down and click <b>Open Anyway</b>. You only do this once. Or build it yourself from the source on GitHub.</p>
+    </details>
+    <details class="reveal">
+      <summary>Does Peerbloom hide my IP address?</summary>
+      <p>No torrent app can on its own: BitTorrent shares your address with the peers you trade with. What Peerbloom does is make your own VPN or SOCKS5 proxy watertight, show you the address peers see, and stop all traffic if the VPN drops. Peerbloom doesn't include a VPN.</p>
+    </details>
+    <details class="reveal">
+      <summary>Is BitTorrent legal?</summary>
+      <p>BitTorrent is a legal technology, used to share Linux releases, open movies, game updates and large public datasets. Downloading or sharing copyrighted material without permission is not, so please respect the law where you live. Peerbloom has no built-in torrent search.</p>
+    </details>
+    <details class="reveal">
+      <summary>Which Macs does it run on?</summary>
+      <p>macOS 14 Sonoma or later, on Apple silicon (M1 and newer).</p>
+    </details>
+    <details class="reveal">
+      <summary>Can I make my own theme?</summary>
+      <p>Yes. In Settings › Appearance, click <b>Copy Theme Maker</b> and paste it into any AI assistant. It asks a few questions and writes a <code>.peerbloomtheme</code> file. Double-click it to install. You can also write one by hand; the format is on GitHub.</p>
+    </details>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final">
+  <div class="final-inner reveal">
+    <img src="assets/icon.png" alt="" width="96" height="96">
+    <h2>Download Peerbloom</h2>
+    <p>Free for everyone. Private by design.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://github.com/EnigmaticZee/peerbloom/releases/latest/download/Peerbloom.dmg">Download for Mac</a>
+      <a class="btn btn-ghost" href="https://github.com/EnigmaticZee/peerbloom">Star on GitHub</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p><img src="assets/icon.png" alt="" width="20" height="20"> Peerbloom · GPL-3.0 · Built on libtorrent</p>
+  <p>This website has no cookies, no analytics and no third-party fonts or scripts.</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

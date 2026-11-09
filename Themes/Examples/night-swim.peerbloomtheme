@@ -1,0 +1,16 @@
+{
+  "format": 1,
+  "name": "Night Swim",
+  "author": "Sam",
+  "appearance": "dark",
+  "font": "rounded",
+  "colors": {
+    "accent": "#3C8DFF",
+    "download": "#4FA3FF",
+    "seeding": "#2DE1C2",
+    "protected": "#7EE2A8",
+    "warning": "#F5B04A",
+    "background": "#0B1A2E",
+    "sidebar": "#08131F"
+  }
+}
